@@ -1,13 +1,16 @@
+#配置服务器端口
 server:
-  port:${port:9091}
+  port: ${port:9091}
+#DB配置
 spring:
   application:
     name: eureka-client-provider
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springboot?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
     username: root
     password: ragnar123
-    url: jdbc:mysql://127.0.0.1:3306/springcloud?useUnicode=true&characterEncoding=UTF-8&serverTimeZone=UTC
+#配置Eureka
 eureka:
   client:
     service-url:
